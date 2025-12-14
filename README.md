@@ -3,6 +3,12 @@
 Welcome!  
 This repository serves as the **master documentation hub** for **Phase 2** of my journey in the **RISC-V SoC Reference Tapeout Program 2025**. Unlike Phase 1, which followed a structured weekly documentation, this phase is significantly more **intensive and execution-focused**, and is therefore documented on a **daily basis**.
 
+  <div align="center">
+    <img src="Images/main.jpg" alt="Alt Text" width="800"/>
+  </div>
+
+<br>
+
 Phase 2 marks the transition from guided learning to **research oriented hands-on SoC implementation with professional tools**, where each day contributes directly toward the final tapeout. To accurately capture this pace and depth, the entire documentation is organized as **day-wise logs**, reflecting real design work, debugging cycles, and engineering decisions as they happen.
 
 Each day of this phase typically involves:
