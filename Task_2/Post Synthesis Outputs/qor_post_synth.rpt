@@ -1,0 +1,324 @@
+Warning: Design 'vsdcaravel' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+Warning: Design 'vsdcaravel' contains 7 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: Timing loop detected. (OPT-150)
+	chip_core/housekeeping/wbbd_sck_reg/clocked_on chip_core/housekeeping/wbbd_sck_reg/Q chip_core/housekeeping/C19359/DATA1_0 chip_core/housekeeping/C19359/Z_0 chip_core/housekeeping/pll_ena_reg/clocked_on chip_core/housekeeping/pll_ena_reg/Q chip_core/pll/I_2/A chip_core/pll/I_2/Z chip_core/pll/C48/B chip_core/pll/C48/Z chip_core/pll/ringosc/iss/dummyinv0/I chip_core/pll/ringosc/iss/dummyinv0/ZN chip_core/pll/ringosc/iss/reseten0/EN chip_core/pll/ringosc/iss/reseten0/ZN chip_core/pll/ringosc/ibufp00/I chip_core/pll/ringosc/ibufp00/ZN chip_core/pll/ringosc/ibufp01/I chip_core/pll/ringosc/ibufp01/ZN chip_core/pll/pll_control/tval_reg[2]/clocked_on chip_core/pll/pll_control/tval_reg[2]/Q chip_core/pll/pll_control/C288/A chip_core/pll/pll_control/C288/Z chip_core/pll/pll_control/I_0/A chip_core/pll/pll_control/I_0/Z chip_core/pll/pll_control/B_0/A chip_core/pll/pll_control/B_0/Z chip_core/pll/pll_control/C479/CONTROL1_0 chip_core/pll/pll_control/C479/Z_5 chip_core/pll/C45/DATA1_5 chip_core/pll/C45/Z_5 chip_core/pll/ringosc/dstage[5].id/delayenb0/EN chip_core/pll/ringosc/dstage[5].id/delayenb0/ZN chip_core/pll/ringosc/ibufp10/I chip_core/pll/ringosc/ibufp10/ZN chip_core/pll/ringosc/ibufp11/I chip_core/pll/ringosc/ibufp11/ZN chip_core/pll/clockp_buffer_1/I chip_core/pll/clockp_buffer_1/Z chip_core/clock_ctrl/divider/odd_0/I_8/A chip_core/clock_ctrl/divider/odd_0/I_8/Z chip_core/clock_ctrl/divider/odd_0/out_counter2_reg/clocked_on chip_core/clock_ctrl/divider/odd_0/out_counter2_reg/Q chip_core/clock_ctrl/divider/odd_0/C160/A chip_core/clock_ctrl/divider/odd_0/C160/Z chip_core/clock_ctrl/divider/C32/A chip_core/clock_ctrl/divider/C32/Z chip_core/clock_ctrl/divider/C31/A chip_core/clock_ctrl/divider/C31/Z chip_core/clock_ctrl/divider/C30/A chip_core/clock_ctrl/divider/C30/Z chip_core/clock_ctrl/C53/DATA1_0 chip_core/clock_ctrl/C53/Z_0 
+Information: Timing loop detected. (OPT-150)
+	chip_core/housekeeping/wbbd_busy_reg/clocked_on chip_core/housekeeping/wbbd_busy_reg/Q chip_core/housekeeping/B_62/A chip_core/housekeeping/B_62/Z chip_core/housekeeping/C19359/CONTROL1_0 chip_core/housekeeping/C19359/Z_0 chip_core/housekeeping/pll_ena_reg/clocked_on chip_core/housekeeping/pll_ena_reg/Q chip_core/pll/I_2/A chip_core/pll/I_2/Z chip_core/pll/C48/B chip_core/pll/C48/Z chip_core/pll/ringosc/iss/dummyinv0/I chip_core/pll/ringosc/iss/dummyinv0/ZN chip_core/pll/ringosc/iss/reseten0/EN chip_core/pll/ringosc/iss/reseten0/ZN chip_core/pll/ringosc/ibufp00/I chip_core/pll/ringosc/ibufp00/ZN chip_core/pll/ringosc/ibufp01/I chip_core/pll/ringosc/ibufp01/ZN chip_core/pll/pll_control/tval_reg[2]/clocked_on chip_core/pll/pll_control/tval_reg[2]/Q chip_core/pll/pll_control/C288/A chip_core/pll/pll_control/C288/Z chip_core/pll/pll_control/I_0/A chip_core/pll/pll_control/I_0/Z chip_core/pll/pll_control/B_0/A chip_core/pll/pll_control/B_0/Z chip_core/pll/pll_control/C479/CONTROL1_0 chip_core/pll/pll_control/C479/Z_5 chip_core/pll/C45/DATA1_5 chip_core/pll/C45/Z_5 chip_core/pll/ringosc/dstage[5].id/delayenb0/EN chip_core/pll/ringosc/dstage[5].id/delayenb0/ZN chip_core/pll/ringosc/ibufp10/I chip_core/pll/ringosc/ibufp10/ZN chip_core/pll/ringosc/ibufp11/I chip_core/pll/ringosc/ibufp11/ZN chip_core/pll/clockp_buffer_1/I chip_core/pll/clockp_buffer_1/Z chip_core/clock_ctrl/divider/odd_0/I_8/A chip_core/clock_ctrl/divider/odd_0/I_8/Z chip_core/clock_ctrl/divider/odd_0/out_counter2_reg/clocked_on chip_core/clock_ctrl/divider/odd_0/out_counter2_reg/Q chip_core/clock_ctrl/divider/odd_0/C160/A chip_core/clock_ctrl/divider/odd_0/C160/Z chip_core/clock_ctrl/divider/C32/A chip_core/clock_ctrl/divider/C32/Z chip_core/clock_ctrl/divider/C31/A chip_core/clock_ctrl/divider/C31/Z chip_core/clock_ctrl/divider/C30/A chip_core/clock_ctrl/divider/C30/Z chip_core/clock_ctrl/C53/DATA1_0 chip_core/clock_ctrl/C53/Z_0 
+Warning: Disabling timing arc between pins 'B' and 'Z' on cell 'chip_core/pll/C48'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A' and 'Z' on cell 'chip_core/housekeeping/C19487'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'B' and 'Z' on cell 'chip_core/housekeeping/C19487'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A2' and 'Z' on cell 'chip_core/pll/ringosc/iss/ctrlen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[11].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[11].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[10].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[10].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[9].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[9].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[8].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[8].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[7].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[7].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[6].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[6].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'I' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[6].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[6].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[6].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[7].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[7].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[8].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[8].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[9].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[9].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[10].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[10].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'B' and 'Z' on cell 'chip_core/clock_ctrl/divider/C32'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A' and 'Z' on cell 'chip_core/clock_ctrl/divider/C29'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'B' and 'Z' on cell 'chip_core/clock_ctrl/divider/C29'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[6].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[6].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'I' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[6].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[6].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[6].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[7].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[7].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[7].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[7].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[8].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[8].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[8].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[8].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[9].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[9].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[9].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[9].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[10].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[10].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[10].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[10].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'B' and 'Z' on cell 'chip_core/clock_ctrl/divider/C33'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'I' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[6].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[11].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[11].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[11].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[11].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/iss/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/iss/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/iss/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/iss/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[11].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[11].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/iss/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/iss/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[5].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[5].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[4].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[4].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[3].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[3].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[2].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[2].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[1].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[1].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[0].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[0].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[0].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[0].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[0].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[0].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[0].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[0].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[1].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[1].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[1].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[1].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[1].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[1].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[2].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[2].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[2].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[2].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[2].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[2].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[3].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[3].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[3].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[3].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[3].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[3].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[4].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[4].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[4].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[4].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[4].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[4].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[5].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[5].id/delayen0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[5].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[5].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[5].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'EN' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[5].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'B' and 'Z' on cell 'chip_core/clock_ctrl/divider2/C32'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A' and 'Z' on cell 'chip_core/clock_ctrl/divider2/C29'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'B' and 'Z' on cell 'chip_core/clock_ctrl/divider2/C29'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'B' and 'Z' on cell 'chip_core/clock_ctrl/divider2/C33'
+         to break a timing loop. (OPT-314)
+ 
+****************************************
+Report : qor
+Design : vsdcaravel
+Version: T-2022.03-SP5
+Date   : Sat Dec 13 18:08:03 2025
+****************************************
+
+
+  Timing Path Group (none)
+  -----------------------------------
+  Levels of Logic:               3.00
+  Critical Path Length:          1.40
+  Critical Path Slack:         uninit
+  Critical Path Clk Period:       n/a
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:       2331
+  Hierarchical Port Count:      37158
+  Leaf Cell Count:              57259
+  Buf/Inv Cell Count:            6626
+  Buf Cell Count:                2055
+  Inv Cell Count:                4571
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:     49962
+  Sequential Cell Count:         7297
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    20308.710337
+  Noncombinational Area:  5077.660156
+  Buf/Inv Area:          11759.330294
+  Total Buffer Area:          8632.80
+  Total Inverter Area:        1831.09
+  Macro/Black Box Area:    100.320000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:             25486.690493
+  Design Area:           25486.690493
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         66082
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: nanodc.iitgn.ac.in
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.00
+  Logic Optimization:                  0.00
+  Mapping Optimization:                0.00
+  -----------------------------------------
+  Overall Compile Time:                0.00
+  Overall Compile Wall Clock Time:     0.00
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1
