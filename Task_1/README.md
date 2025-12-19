@@ -1,4 +1,4 @@
-# Day 2 - Functional and GLS Replication (SCL180) on my own IITGN Machine
+# Task 1 - Functional and GLS Replication (SCL180) on my own IITGN Machine
 
 Day 2 focused on independently reproducing the complete **RTL, synthesis, and gate-level simulation (GLS)** flow of the vsdcaravel RISC-V SoC on the IITGN machine using the **SCL180 PDK**. The day involved resolving RTL compilation issues, successfully synthesizing the design with Synopsys Design Compiler, and validating **RTL–GLS functional equivalence** through housekeeping SPI tests. This exercise strengthened practical understanding of SoC bring-up, synthesis readiness, and power-aware gate-level verification.
 
