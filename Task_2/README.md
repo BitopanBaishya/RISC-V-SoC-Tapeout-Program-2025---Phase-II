@@ -1084,4 +1084,4 @@ For questions, issues, or contributions:
 
 ---
 
-**Last Updated:** December 16, 2025
+**Last Updated:** December 19, 2025
