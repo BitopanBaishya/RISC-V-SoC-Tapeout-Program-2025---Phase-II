@@ -39,8 +39,8 @@ Each day’s work is documented in its respective folder and linked below.
 
 > *(Links will be added incrementally as the program progresses.)*
 
-- Task 1 – [Link](https://github.com/BitopanBaishya/RISC-V-SoC-Tapeout-Program-2025---Phase-II/tree/main/Task_1) 
-- Task 2 – [Link](https://github.com/BitopanBaishya/RISC-V-SoC-Tapeout-Program-2025---Phase-II/tree/main/Task_2) 
+- Task 1 – Functional and GLS Replication (SCL180) on my own IITGN Machine - [Link](https://github.com/BitopanBaishya/RISC-V-SoC-Tapeout-Program-2025---Phase-II/tree/main/Task_1) 
+- Task 2 – RISC-V SoC Research Task – Synopsys VCS + DC_TOPO Flow (SCL180) - [Link](https://github.com/BitopanBaishya/RISC-V-SoC-Tapeout-Program-2025---Phase-II/tree/main/Task_2) 
 - Task 3 – Link coming soon  
 
 ---
