@@ -39,9 +39,9 @@ Each day’s work is documented in its respective folder and linked below.
 
 > *(Links will be added incrementally as the program progresses.)*
 
-- Day 1 – Link coming soon  
-- Day 2 – Link coming soon  
-- Day 3 – Link coming soon  
+- Task 1 – [Link](https://github.com/BitopanBaishya/RISC-V-SoC-Tapeout-Program-2025---Phase-II/tree/main/Task_1) 
+- Task 2 – Link coming soon  
+- Task 3 – Link coming soon  
 
 ---
 
