@@ -40,34 +40,53 @@ Each day’s work is documented in its respective folder and linked below.
 > *(Links will be added incrementally as the program progresses.)*
 
 - Task 1 – [Link](https://github.com/BitopanBaishya/RISC-V-SoC-Tapeout-Program-2025---Phase-II/tree/main/Task_1) 
-- Task 2 – Link coming soon  
+- Task 2 – [Link](https://github.com/BitopanBaishya/RISC-V-SoC-Tapeout-Program-2025---Phase-II/tree/main/Task_2) 
 - Task 3 – Link coming soon  
 
 ---
 
-## 🙏 Acknowledgements
-I would like to sincerely thank [Kunal Ghosh](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/) and the [VLSI System Design](https://vsdiat.vlsisystemdesign.com/) team for designing and conducting this program, and for providing the guidance, structure, and challenges that make this learning experience possible.
+## 🙏 Acknowledgments
 
-I also acknowledge the open-source tools and communities that enable hands-on learning in VLSI and SoC design.
+This project is part of the **RISC-V Reference SoC Tapeout Program** conducted at **IIT Gandhinagar** in collaboration with **VLSI System Design (VSD)** and **Synopsys**.
+
+### Team and Contributors
+
+- **Institution:** Indian Institute of Technology Gandhinagar (IITGN)
+- **Program:** RISC-V SoC Tapeout Program
+- **PDK Support:** Synopsys SCL 180nm PDK v3.0
+- **Base Design:** Efabless Caravel (Apache-2.0 License)
+- **Processor Core:** VexRiscv (MIT License)
+- **Date:** December 12, 2025
+
+### Special Thanks
+
+- IIT Gandhinagar faculty for infrastructure and guidance
+- VSD for comprehensive training and support
+- Synopsys for PDK access and tool licenses
+- Open-source RISC-V community
 
 ---
 
-## 📜 License
-This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
+## 📄 License
 
-In brief:
-- You are free to use, modify, and share this work
-- Proper attribution is appreciated
-- The project is provided *as-is*, without warranty
+This project is licensed under the **Apache License 2.0**.
+
+- **SPDX-License-Identifier:** Apache-2.0
+- **Copyright:** 2025 IIT Gandhinagar
+
+### Component Licenses
+
+- **Caravel Framework:** Apache-2.0 (Efabless)
+- **VexRiscv Core:** MIT License
+- **SCL180 PDK:** Proprietary (Synopsys) - Educational Use
 
 ---
 
-## 📬 Get in Touch
-I’m always open to feedback, corrections, and technical discussions. Since this repository reflects an active learning and execution process, there may be mistakes—pointing them out helps improve both the work and my understanding.
+## 📬 Contact and Support
 
-You can reach me at:  
-📧 **bitopanbaishya2@gmail.com**
+For questions, issues, or contributions:
 
-If you find this repository useful, feel free to share it with your peers.
-
-Let’s build, debug, and learn—one day at a time.
+- **Repository:** https://github.com/vsdip/vsdRiscvScl180
+- **Branch:** iitgn
+- **Institution:** IIT Gandhinagar
+- **Program Website:** https://www.vlsisystemdesign.com/soc-labs/
