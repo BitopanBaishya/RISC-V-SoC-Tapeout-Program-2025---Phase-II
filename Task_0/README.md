@@ -1,4 +1,4 @@
-# Day 1 - Caravel Housekeeping SPI RTL-vs-GLS Verification
+# Task 0 - Caravel Housekeeping SPI RTL-vs-GLS Verification
 
 Summary of the day
 
