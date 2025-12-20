@@ -1,0 +1,1142 @@
+[SCL] 12/20/2025 17:31:35 PID:9364 Client:nanodc.iitgn.ac.in Authorization failed Synopsys 2022.12
+[SCL] 12/20/2025 17:31:35 PID:9364 Client:nanodc.iitgn.ac.in Authorization failed Synopsys-Release 2022.12
+[SCL] 12/20/2025 17:31:36 PID:9364 Client:nanodc.iitgn.ac.in Authorization failed Galaxy-Internal-Debug 2022.12
+[icc2-lic Sat Dec 20 17:31:36 2025] Sending authorization request for 'ICCompilerII'
+[SCL] 12/20/2025 17:31:36 PID:9364 Client:nanodc.iitgn.ac.in Authorization failed ICCompilerII 2022.12
+[icc2-lic Sat Dec 20 17:31:36 2025] Authorization request for 'ICCompilerII' failed (-5)
+[icc2-lic Sat Dec 20 17:31:36 2025] Sending authorization request for 'ICCompilerII-NX'
+[SCL] 12/20/2025 17:31:37 PID:9364 Client:nanodc.iitgn.ac.in Server:27020@c2s.cdacb.in Authorization succeeded ICCompilerII-NX 2022.12
+[icc2-lic Sat Dec 20 17:31:37 2025] Authorization request for 'ICCompilerII-NX' succeeded
+
+
+
+                              IC Compiler II (TM)
+
+                Version U-2022.12-SP3 for linux64 - Apr 18, 2023
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+ 
+############################################
+# Task 5  : SoC Floorplanning Using ICC2
+# Design  : vsdcaravel
+# Tool    : Synopsys ICC2 2022.12
+############################################
+# -------------------------------------------------
+# Basic variables (edit paths if needed)
+# -------------------------------------------------
+set DESIGN_NAME vsdcaravel
+vsdcaravel
+set ROOT_DIR "/home/bbaishya/vsdRiscvScl180"
+/home/bbaishya/vsdRiscvScl180
+set WORK_DIR "$ROOT_DIR/floorplan"
+/home/bbaishya/vsdRiscvScl180/floorplan
+set NETLIST     "$ROOT_DIR/synthesis/output/vsdcaravel_synthesis.v"
+/home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v
+set WORK_LIB    "$WORK_DIR/work_lib.ndm"
+/home/bbaishya/vsdRiscvScl180/floorplan/work_lib.ndm
+set REFERENCE_LIBRARY  "/home/Synopsys/pdk/SCL_PDK_3/work/run1/icc2_workshop_collaterals/standaloneFlow/work/raven_wrapperNangate/lib.ndm"
+/home/Synopsys/pdk/SCL_PDK_3/work/run1/icc2_workshop_collaterals/standaloneFlow/work/raven_wrapperNangate/lib.ndm
+# -------------------------------------------------
+# Create NDM design library
+# -------------------------------------------------
+if {[file exists $WORK_LIB]} {
+    file delete -force $WORK_LIB
+}
+create_lib $WORK_LIB \
+    -ref_libs $REFERENCE_LIBRARY
+{work_lib.ndm}
+open_lib $WORK_LIB
+Information: Incrementing open_count of library 'work_lib.ndm' to 2. (LIB-017)
+{work_lib.ndm}
+# -------------------------------------------------
+# Read synthesized netlist
+# -------------------------------------------------
+read_verilog -top $DESIGN_NAME $NETLIST
+Information: Reading Verilog into new design 'vsdcaravel' in library 'work_lib.ndm'. (VR-012)
+Loading verilog file '/home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v'
+Information: tri converted to a wire with no special attributes
+            	at line 46 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 48 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 49 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 50 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 51 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 260 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 261 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 262 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 263 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 264 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 265 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 266 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 267 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 268 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 269 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 270 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 271 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 272 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 273 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 274 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 275 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 276 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 277 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 278 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 279 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 280 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 281 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 282 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 283 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 284 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 285 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 286 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 287 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 288 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 289 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 290 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 291 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 292 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 293 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 294 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 295 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 296 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 297 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 298 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 299 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 300 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 301 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 19860 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 19861 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 19862 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 19863 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 19864 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 19865 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 30505 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 30506 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 30507 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 30508 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 30509 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 30510 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31211 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31661 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31703 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31704 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31705 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31723 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31724 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31725 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31743 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31744 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31745 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31763 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31764 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31765 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31783 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31784 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31785 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31803 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31804 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31805 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31823 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31824 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31825 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31843 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31844 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31845 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31863 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31864 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31865 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31883 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31884 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31885 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31903 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31904 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31905 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31923 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31924 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31925 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31943 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31944 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31945 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 31966 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 32115 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 32240 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 32321 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 32322 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 33244 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 33245 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 33246 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 33247 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 33248 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 33249 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43185 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43252 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43253 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43254 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43255 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43256 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43257 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43337 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43338 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43339 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43340 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43341 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43342 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43422 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43423 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43424 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43425 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43426 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43427 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43509 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43510 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43511 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43512 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43513 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43514 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43595 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43596 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43597 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43598 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43599 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43600 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43681 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43682 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43683 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43684 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43685 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43686 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43767 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43768 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43769 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43770 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43771 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43772 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43854 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43855 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43856 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43857 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43858 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43859 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43940 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43941 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43942 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43943 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43944 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 43945 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44027 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44028 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44029 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44030 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44031 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44032 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44113 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44114 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44115 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44116 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44117 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44118 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44200 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44201 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44202 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44203 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44204 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44205 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44285 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44286 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44287 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44288 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44289 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44290 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44372 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44373 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44374 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44375 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44376 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44377 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44458 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44459 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44460 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44461 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44462 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44463 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44546 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44547 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44548 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44549 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44550 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44551 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44632 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44633 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44634 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44635 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44636 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44637 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44720 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44721 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44722 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44723 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44724 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44725 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44807 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44808 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44809 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44810 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44811 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44812 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44892 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44893 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44894 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44895 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44896 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44897 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44979 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44980 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44981 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44982 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44983 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 44984 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45064 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45065 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45066 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45067 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45068 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45069 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45146 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45147 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45148 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45149 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45150 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45151 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45231 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45232 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45233 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45234 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45235 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45236 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45317 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45318 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45319 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45320 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45321 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45322 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45404 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45405 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45406 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45407 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45408 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45409 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45490 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45491 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45492 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45493 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45494 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45495 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45577 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45578 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45579 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45580 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45581 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45582 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45663 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45664 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45665 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45666 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45667 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45668 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45750 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45751 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45752 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45753 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45754 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45755 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45836 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45837 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45838 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45839 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45840 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45841 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45923 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45924 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45925 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45926 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45927 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 45928 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46009 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46010 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46011 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46012 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46013 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46014 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46096 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46097 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46098 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46099 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46100 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46101 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46182 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46183 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46184 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46185 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46186 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46187 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46268 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46269 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46270 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46271 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46272 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46273 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46354 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46355 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46356 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46357 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46358 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46359 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46441 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46442 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46443 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46444 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46445 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46446 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46915 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46916 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46917 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46918 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46919 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46920 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46921 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46922 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46923 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46924 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46925 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46926 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46927 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46928 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46929 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46930 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46931 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46932 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46933 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46934 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 46935 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47867 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47868 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47869 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47870 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47871 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47872 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47873 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47874 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47875 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47876 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47877 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47878 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47879 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47880 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47881 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47882 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47883 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47884 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47885 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47886 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47887 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47888 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47889 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47890 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47891 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47892 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47893 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47894 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47895 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47896 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47897 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47898 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47899 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47900 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47901 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47902 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47903 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47904 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47905 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47906 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47907 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47908 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47909 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47910 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47911 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47912 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47913 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47914 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47915 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47916 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47917 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47918 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47919 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47920 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47921 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+            	at line 47922 in /home/bbaishya/vsdRiscvScl180/synthesis/output/vsdcaravel_synthesis.v (SVR-21)
+Number of modules read: 105
+Top level ports: 63
+Total ports in all modules: 14385
+Total nets in all modules: 44976
+Total instances in all modules: 23194
+Elapsed = 00:00:00.14, CPU = 00:00:00.14
+1
+link_block
+Using libraries: work_lib.ndm raven_wrapperNangate
+Linking block work_lib.ndm:vsdcaravel.design
+Warning: Unable to resolve reference to 'pt3b02' first referenced from module 'chip_io'. (LNK-005)
+Warning: Unable to resolve reference to 'pc3d21' first referenced from module 'chip_io'. (LNK-005)
+Warning: Unable to resolve reference to 'pc3d01_wrapper' first referenced from module 'chip_io'. (LNK-005)
+Warning: Unable to resolve reference to 'pc3b03ed_wrapper' first referenced from module 'chip_io'. (LNK-005)
+Warning: Unable to resolve reference to 'pc3b03ed_wrapper' first referenced from module 'mprj_io'. (LNK-005)
+Warning: Unable to resolve reference to 'buffd1' first referenced from module 'caravel_core'. (LNK-005)
+Warning: Unable to resolve reference to 'dfnrq1' first referenced from module 'mgmt_core'. (LNK-005)
+Warning: Unable to resolve reference to 'dfnrn1' first referenced from module 'mgmt_core'. (LNK-005)
+Warning: Unable to resolve reference to 'inv0d0' first referenced from module 'mgmt_core'. (LNK-005)
+Warning: Unable to resolve reference to 'or02d0' first referenced from module 'mgmt_core'. (LNK-005)
+Warning: Unable to resolve reference to 'nr02d0' first referenced from module 'mgmt_core'. (LNK-005)
+Warning: Unable to resolve reference to 'mx02d1' first referenced from module 'mgmt_core'. (LNK-005)
+Information: Message limit (link.reference_limit 12) reached for this block, remaining reference messages will be suppressed. (LNK-043)
+Information: Block 'work_lib.ndm:vsdcaravel.design' has 23083 unbound instances. (LNK-073)
+Information: Block 'work_lib.ndm:vsdcaravel.design' has 127 unresolved references. (LNK-074)
+Information: Total 127 mismatches are found on block 'work_lib.ndm:vsdcaravel.design'. (DMM-116)
+Error: 'RAM128' is an empty RTL module without an associated physical blackbox design. (LNK-094)
+Design 'vsdcaravel' was successfully linked.
+0
+# -------------------------------------------------
+# Floorplan parameters (MICRONS)
+# Die Size  : 3588 µm × 5188 µm
+# Core Margin : 200 µm on all sides
+#
+# NOTE:
+# This ICC2 version requires die-controlled initialization
+# using -control_type die and -boundary syntax.
+# -------------------------------------------------
+set DIE_WIDTH   3588
+3588
+set DIE_HEIGHT  5188
+5188
+set CORE_MARGIN 200
+200
+# -------------------------------------------------
+# Create Floorplan (EXPLICIT)
+# -------------------------------------------------
+initialize_floorplan \
+    -control_type die \
+    -boundary {{0 0} {3588 5188}} \
+    -core_offset {200 200 200 200}
+[icc2-lic Sat Dec 20 17:31:39 2025] Command 'initialize_floorplan' requires licenses
+[icc2-lic Sat Dec 20 17:31:39 2025] Sending authorization request for 'ICCompilerII'
+[SCL] 12/20/2025 17:31:39 PID:9364 Client:nanodc.iitgn.ac.in Authorization failed ICCompilerII 2022.12
+[icc2-lic Sat Dec 20 17:31:39 2025] Authorization request for 'ICCompilerII' failed (-5)
+[icc2-lic Sat Dec 20 17:31:39 2025] Sending authorization request for 'ICCompilerII-4'
+[SCL] 12/20/2025 17:31:39 PID:9364 Client:nanodc.iitgn.ac.in Authorization failed ICCompilerII-4 2022.12
+[icc2-lic Sat Dec 20 17:31:39 2025] Authorization request for 'ICCompilerII-4' failed (-5)
+[icc2-lic Sat Dec 20 17:31:39 2025] Sending authorization request for 'ICCompilerII-8'
+[SCL] 12/20/2025 17:31:39 PID:9364 Client:nanodc.iitgn.ac.in Server:27020@c2s.cdacb.in Authorization succeeded ICCompilerII-8 2022.12
+[icc2-lic Sat Dec 20 17:31:39 2025] Authorization request for 'ICCompilerII-8' succeeded
+[icc2-lic Sat Dec 20 17:31:39 2025] Sending authorization request for 'ICCompilerII-NX'
+[SCL] 12/20/2025 17:31:40 PID:9364 Client:nanodc.iitgn.ac.in Server:27020@c2s.cdacb.in Authorization succeeded ICCompilerII-NX 2022.12
+[icc2-lic Sat Dec 20 17:31:40 2025] Authorization request for 'ICCompilerII-NX' succeeded
+[icc2-lic Sat Dec 20 17:31:40 2025] Attempting to check-out alternate set of keys directly with queueing
+[icc2-lic Sat Dec 20 17:31:40 2025] Sending count request for 'ICCompilerII-8' 
+[icc2-lic Sat Dec 20 17:31:40 2025] Count request for 'ICCompilerII-8' returned 0 
+[icc2-lic Sat Dec 20 17:31:40 2025] Sending check-out request for 'ICCompilerII-8' (1) with wait option
+[SCL] 12/20/2025 17:31:40 Checking status for feature ICCompilerII-8
+[SCL] 12/20/2025 17:31:40 PID:9364 Client:nanodc.iitgn.ac.in Server:27020@c2s.cdacb.in Checkout succeeded ICCompilerII-8 2022.12
+[icc2-lic Sat Dec 20 17:31:40 2025] Check-out request for 'ICCompilerII-8' with wait option succeeded
+[icc2-lic Sat Dec 20 17:31:40 2025] Sending checkout check request for 'ICCompilerII-8' 
+[icc2-lic Sat Dec 20 17:31:40 2025] Checkout check request for 'ICCompilerII-8' returned 0 
+[icc2-lic Sat Dec 20 17:31:40 2025] Sending count request for 'ICCompilerII-8' 
+[icc2-lic Sat Dec 20 17:31:40 2025] Count request for 'ICCompilerII-8' returned 1 
+[icc2-lic Sat Dec 20 17:31:40 2025] Sending count request for 'ICCompilerII-NX' 
+[icc2-lic Sat Dec 20 17:31:40 2025] Count request for 'ICCompilerII-NX' returned 0 
+[icc2-lic Sat Dec 20 17:31:40 2025] Sending check-out request for 'ICCompilerII-NX' (1) with wait option
+[SCL] 12/20/2025 17:31:40 Checking status for feature ICCompilerII-NX
+[SCL] 12/20/2025 17:31:40 PID:9364 Client:nanodc.iitgn.ac.in Server:27020@c2s.cdacb.in Checkout succeeded ICCompilerII-NX 2022.12
+[icc2-lic Sat Dec 20 17:31:40 2025] Check-out request for 'ICCompilerII-NX' with wait option succeeded
+[icc2-lic Sat Dec 20 17:31:40 2025] Sending checkout check request for 'ICCompilerII-NX' 
+[icc2-lic Sat Dec 20 17:31:40 2025] Checkout check request for 'ICCompilerII-NX' returned 0 
+[icc2-lic Sat Dec 20 17:31:40 2025] Sending count request for 'ICCompilerII-NX' 
+[icc2-lic Sat Dec 20 17:31:40 2025] Count request for 'ICCompilerII-NX' returned 1 
+[icc2-lic Sat Dec 20 17:31:40 2025] Check-out of alternate set of keys directly with queueing was successful
+Warning: The routing directions for layer 'metal1 metal2 metal3 metal4 metal5 metal6 metal7 metal8 metal9 metal10 ' are missing. Auto deriving 'horizontal' routing direction for layer 'metal1'. (DPUI-924)
+Warning: The routing directions for layer 'metal1 metal2 metal3 metal4 metal5 metal6 metal7 metal8 metal9 metal10 ' are missing. Auto deriving 'vertical' routing direction for layer 'metal2'. (DPUI-924)
+Warning: The routing directions for layer 'metal1 metal2 metal3 metal4 metal5 metal6 metal7 metal8 metal9 metal10 ' are missing. Auto deriving 'horizontal' routing direction for layer 'metal3'. (DPUI-924)
+Warning: The routing directions for layer 'metal1 metal2 metal3 metal4 metal5 metal6 metal7 metal8 metal9 metal10 ' are missing. Auto deriving 'vertical' routing direction for layer 'metal4'. (DPUI-924)
+Warning: The routing directions for layer 'metal1 metal2 metal3 metal4 metal5 metal6 metal7 metal8 metal9 metal10 ' are missing. Auto deriving 'horizontal' routing direction for layer 'metal5'. (DPUI-924)
+Warning: The routing directions for layer 'metal1 metal2 metal3 metal4 metal5 metal6 metal7 metal8 metal9 metal10 ' are missing. Auto deriving 'vertical' routing direction for layer 'metal6'. (DPUI-924)
+Warning: The routing directions for layer 'metal1 metal2 metal3 metal4 metal5 metal6 metal7 metal8 metal9 metal10 ' are missing. Auto deriving 'horizontal' routing direction for layer 'metal7'. (DPUI-924)
+Warning: The routing directions for layer 'metal1 metal2 metal3 metal4 metal5 metal6 metal7 metal8 metal9 metal10 ' are missing. Auto deriving 'vertical' routing direction for layer 'metal8'. (DPUI-924)
+Warning: The routing directions for layer 'metal1 metal2 metal3 metal4 metal5 metal6 metal7 metal8 metal9 metal10 ' are missing. Auto deriving 'horizontal' routing direction for layer 'metal9'. (DPUI-924)
+Warning: The routing directions for layer 'metal1 metal2 metal3 metal4 metal5 metal6 metal7 metal8 metal9 metal10 ' are missing. Auto deriving 'vertical' routing direction for layer 'metal10'. (DPUI-924)
+Removing existing floorplan objects
+Creating core...
+Core utilization ratio = 0.00%
+Unplacing all cells...
+Creating site array...
+Creating routing tracks...
+Initializing floorplan completed.
+# -------------------------------------------------
+# IO Pad Placement (manual, evenly distributed)
+# Replace PAD_* with actual pad cell names
+# -------------------------------------------------
+# Top IO region (along top die edge)
+create_placement_blockage \
+  -name IO_BOTTOM \
+  -type hard \
+  -boundary {{0 0} {3588 100}}
+{IO_BOTTOM}
+# Top IO region (along top die edge)
+create_placement_blockage \
+  -name IO_TOP \
+  -type hard \
+  -boundary {{0 5088} {3588 5188}}
+{IO_TOP}
+# Left IO region (along left die edge)
+create_placement_blockage \
+  -name IO_LEFT \
+  -type hard \
+  -boundary {{0 100} {100 5088}}
+{IO_LEFT}
+# Right IO region (along right die edge)
+create_placement_blockage \
+  -name IO_RIGHT \
+  -type hard \
+  -boundary {{3488 100} {3588 5088}}
+{IO_RIGHT}
+# Fix IO pads
+set_attribute [get_cells -filter pad_cell==true] status fixed
+# -------------------------------------------------
+# Write DEF file
+# -------------------------------------------------
+write_def "$WORK_DIR/outputs/vsdcaravel_floorplan.def"
+****************************************
+Report : Data Mismatches
+Version: U-2022.12-SP3
+Date   : Sat Dec 20 17:31:40 2025
+****************************************
+
+==============================
+Design : vsdcaravel
+==============================
+Mismatch Type                        Total Count   Repaired  Unrepaired
+--------------------------------------------------------------------------------
+missing_logical_reference            127           0         127
+empty_logic_module                   1             0         1
+---------------------------------------
+Number of Written DEF Constructs
+---------------------------------------
+VERSION                        : 1
+DIVIDERCHAR                    : 1
+BUSBITCHARS                    : 1
+DESIGN                         : 1
+UNITS                          : 1
+DIEAREA                        : 1
+ROW                            : 3420
+TRACKS                         : 20
+COMPONENTS                     : 23088
+PINS                           : 63
+BLOCKAGES                      : 4
+NETS                           : 23652
+1
+# -------------------------------------------------
+# Save floorplan
+# -------------------------------------------------
+save_block -as floorplan_only
+Information: The command 'save_block' cleared the undo history. (UNDO-016)
+Information: Saving 'work_lib.ndm:vsdcaravel.design' to 'work_lib.ndm:floorplan_only.design'. (DES-028)
+1
+# -------------------------------------------------
+# Automatically Launch GUI for inspection
+# -------------------------------------------------
+gui_start
+get_ports
+{vddio vddio_2 vssio vssio_2 vdda vssa vccd vssd vdda1 vdda1_2 vdda2 vssa1 vssa1_2 vssa2 vccd1 vccd2 vssd1 vssd2 gpio {mprj_io[37]} {mprj_io[36]} {mprj_io[35]} {mprj_io[34]} {mprj_io[33]} {mprj_io[32]} {mprj_io[31]} {mprj_io[30]} {mprj_io[29]} {mprj_io[28]} {mprj_io[27]} {mprj_io[26]} {mprj_io[25]} {mprj_io[24]} {mprj_io[23]} {mprj_io[22]} {mprj_io[21]} {mprj_io[20]} {mprj_io[19]} {mprj_io[18]} {mprj_io[17]} {mprj_io[16]} {mprj_io[15]} {mprj_io[14]} {mprj_io[13]} {mprj_io[12]} {mprj_io[11]} {mprj_io[10]} {mprj_io[9]} {mprj_io[8]} {mprj_io[7]} {mprj_io[6]} {mprj_io[5]} {mprj_io[4]} {mprj_io[3]} {mprj_io[2]} {mprj_io[1]} {mprj_io[0]} clock reset_n flash_csb flash_clk flash_io0 flash_io1}
+place_pins -self
+[icc2-lic Sat Dec 20 17:31:42 2025] Command 'place_pins' requires licenses
+[icc2-lic Sat Dec 20 17:31:42 2025] Attempting to check-out alternate set of keys directly with queueing
+[icc2-lic Sat Dec 20 17:31:42 2025] Sending count request for 'ICCompilerII-8' 
+[icc2-lic Sat Dec 20 17:31:42 2025] Count request for 'ICCompilerII-8' returned 1 
+[icc2-lic Sat Dec 20 17:31:42 2025] Sending check-out request for 'ICCompilerII-8' (1) with wait option
+[SCL] 12/20/2025 17:31:42 Checking status for feature ICCompilerII-8
+[SCL] 12/20/2025 17:31:42 PID:9364 Client:nanodc.iitgn.ac.in Server:27020@c2s.cdacb.in Checkout succeeded ICCompilerII-8 2022.12
+[icc2-lic Sat Dec 20 17:31:42 2025] Check-out request for 'ICCompilerII-8' with wait option succeeded
+[icc2-lic Sat Dec 20 17:31:42 2025] Sending checkout check request for 'ICCompilerII-8' 
+[icc2-lic Sat Dec 20 17:31:42 2025] Checkout check request for 'ICCompilerII-8' returned 0 
+[icc2-lic Sat Dec 20 17:31:42 2025] Sending count request for 'ICCompilerII-8' 
+[icc2-lic Sat Dec 20 17:31:42 2025] Count request for 'ICCompilerII-8' returned 1 
+[icc2-lic Sat Dec 20 17:31:42 2025] Sending count request for 'ICCompilerII-NX' 
+[icc2-lic Sat Dec 20 17:31:42 2025] Count request for 'ICCompilerII-NX' returned 1 
+[icc2-lic Sat Dec 20 17:31:42 2025] Sending check-out request for 'ICCompilerII-NX' (1) with wait option
+[SCL] 12/20/2025 17:31:42 Checking status for feature ICCompilerII-NX
+[SCL] 12/20/2025 17:31:42 PID:9364 Client:nanodc.iitgn.ac.in Server:27020@c2s.cdacb.in Checkout succeeded ICCompilerII-NX 2022.12
+[icc2-lic Sat Dec 20 17:31:42 2025] Check-out request for 'ICCompilerII-NX' with wait option succeeded
+[icc2-lic Sat Dec 20 17:31:42 2025] Sending checkout check request for 'ICCompilerII-NX' 
+[icc2-lic Sat Dec 20 17:31:42 2025] Checkout check request for 'ICCompilerII-NX' returned 0 
+[icc2-lic Sat Dec 20 17:31:42 2025] Sending count request for 'ICCompilerII-NX' 
+[icc2-lic Sat Dec 20 17:31:42 2025] Count request for 'ICCompilerII-NX' returned 1 
+[icc2-lic Sat Dec 20 17:31:42 2025] Check-out of alternate set of keys directly with queueing was successful
+Information: Starting 'place_pins' (FLW-8000)
+Information: Time: 2025-12-20 17:31:42 / Session: 0.00 hr / Command: 0.00 hr / Memory: 450 MB (FLW-8100)
+Load DB...
+CPU Time for load db: 00:00:00.01u 00:00:00.00s 00:00:00.01e: 
+
+Min routing layer: metal1
+Max routing layer: metal10
+
+
+CPU Time for Top Level Pre-Route Processing: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Number of block ports: 63
+Number of block pin locations assigned from router: 0
+CPU Time for Pin Preparation: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Number of PG ports on blocks: 0
+Number of pins created: 63
+CPU Time for Pin Creation: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Total Pin Placement CPU Time: 00:00:00.03u 00:00:00.01s 00:00:00.04e: 
+Information: Ending 'place_pins' (FLW-8001)
+Information: Time: 2025-12-20 17:31:42 / Session: 0.00 hr / Command: 0.00 hr / Memory: 520 MB (FLW-8100)
+1
+1
+icc2_shell> exit
+Maximum memory usage for this session: 520.35 MB
+Maximum memory usage for this session including child processes: 520.35 MB
+CPU usage for this session:      9 seconds (  0.00 hours)
+Elapsed time for this session:    207 seconds (  0.06 hours)
+Thank you for using IC Compiler II.
+[SCL] 12/20/2025 17:35:00 PID:9364 Client:nanodc.iitgn.ac.in checkin ICCompilerII-8 
+[SCL] 12/20/2025 17:35:00 PID:9364 Client:nanodc.iitgn.ac.in checkin ICCompilerII-NX 
+[SCL] 12/20/2025 17:35:00 PID:9364 Client:nanodc.iitgn.ac.in checkin (null) 
+this API scl_mt_init() needs to be used with the threaded version of SCL library.
