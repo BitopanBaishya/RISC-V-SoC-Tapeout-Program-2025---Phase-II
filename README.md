@@ -69,7 +69,7 @@ This project is part of the **RISC-V Reference SoC Tapeout Program** conducted a
 
 ## 📄 License
 
-This project is licensed under the **Apache License 2.0**.
+This project is licensed under the **Apache License 2.0**. [Learn more](/LICENSE)
 
 - **SPDX-License-Identifier:** Apache-2.0
 - **Copyright:** 2025 IIT Gandhinagar
