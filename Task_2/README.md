@@ -782,11 +782,6 @@ Upon successful synthesis, the following key output files are generated:
 
 ---
 
-Locked in. Final lap energy. ⚡
-Here’s a **clean, professional, GitHub-ready documentation section** for **Gate-Level Simulation (GLS)** using Synopsys VCS, structured exactly as requested.
-
----
-
 ## ⚙️ Gate-Level Simulation (GLS)
 
 ### 1. GLS Makefile
