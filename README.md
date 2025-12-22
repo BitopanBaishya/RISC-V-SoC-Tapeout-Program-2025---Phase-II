@@ -89,7 +89,7 @@ This project is licensed under the **Apache License 2.0**. [Learn more](/LICENSE
 
 For questions, issues, or contributions:
 
-- **Repository:** https://github.com/vsdip/vsdRiscvScl180
+- **Starting Repository:** https://github.com/vsdip/vsdRiscvScl180
 - **Branch:** iitgn
 - **Institution:** IIT Gandhinagar
 - **Program Website:** https://www.vlsisystemdesign.com/soc-labs/
