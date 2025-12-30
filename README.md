@@ -83,8 +83,6 @@ This section outlines the progressive technical milestones achieved during Phase
 | Initial Synthesis Setup | Synopsys Design Compiler | Clean synthesis with SCL180 libraries     |
 | Toolchain Alignment     | DC, VCS                  | Verified end-to-end RTL → netlist flow    |
 
-> **Note:** This stage provided a shared foundation and was essential for ensuring consistency before deeper RTL and architectural changes were introduced.
-
 ### Stage 2: RTL Refactoring & Technology-Specific Debug
 
 **Goal**: Eliminate legacy dependencies and adapt the design for deterministic behavior under SCL180 constraints.
@@ -106,6 +104,8 @@ This section outlines the progressive technical milestones achieved during Phase
 | Backend Flow Scripting | Tcl (ICC2)          | Automated PD flow scripts                         |
 | Flow Validation        | RavenSoC            | End-to-end synthesis-to-P&R validation            |
 | Flow Portability       | Current SoC         | Backend methodology ready for reuse               |
+
+> **Note:** This phase focused on establishing a logically robust and backend-ready design state prior to full physical implementation. During this process, multiple issues were identified within the GPIO and MPRJ block RTL, which required resolution before proceeding with backend closure. To avoid blocking physical design progress, efforts were redirected to RavenSoC, where a complete physical design flow was developed and validated using Synopsys tools. This approach ensured that, once the GPIO and MPRJ blocks are finalized, the proven RavenSoC PD flow can be directly applied to VSDCaravel—reducing turnaround time while enabling parallel exploration of both frontend and backend design workflows.
 
 ---
 
