@@ -299,7 +299,7 @@ Each day’s work is documented in its respective folder and linked below.
 - Task 2 – RISC-V SoC Research Task – Synopsys VCS + DC_TOPO Flow (SCL180) - [Link](https://github.com/BitopanBaishya/RISC-V-SoC-Tapeout-Program-2025---Phase-II/tree/main/Task_2) 
 - Task 3 – Removal of On-Chip POR and Final GLS Validation (SCL-180) - [Link](https://github.com/BitopanBaishya/RISC-V-SoC-Tapeout-Program-2025---Phase-II/tree/main/Task_3)
 - Task 4 – Full Management SoC DV Validation on SCL-180 (POR-Free Design)
-- Task 5 – SoC Floorplanning Using ICC2 (Floorplan Only)
+- Task 5 – SoC Floorplanning Using ICC2 (Floorplan Only) - [Link](https://github.com/BitopanBaishya/RISC-V-SoC-Tapeout-Program-2025---Phase-II/tree/main/Task_5)
 - Task 6 – Backend Flow Bring-Up with 100 MHz Performance Target
 
 ---
