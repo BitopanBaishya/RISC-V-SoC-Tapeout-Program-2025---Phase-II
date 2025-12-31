@@ -71,15 +71,13 @@ The project involved hands-on engagement with RTL integration, synthesis, simula
 
 This section outlines the progressive technical milestones achieved during Phase 2 of the tapeout program, highlighting areas of shared groundwork and individual ownership in RTL refinement, technology alignment, and backend flow enablement.
 
----
-
 ### Stage 1: Baseline Enablement & Flow Stabilization
 
 **Goal**: Establish a stable simulation and synthesis environment using the SCL180 PDK and validate baseline functionality.
 
 | **Focus**               | **Tools & Environment**  | **Resulting Artifacts**                   |
 | ----------------------- | ------------------------ | ----------------------------------------- |
-| Baseline RTL Simulation | Icarus Verilog           | Functionally validated reference behavior |
+| Baseline RTL Simulation | Icarus Verilog, Synopsys VCS | Functionally validated reference behavior |
 | Initial Synthesis Setup | Synopsys Design Compiler | Clean synthesis with SCL180 libraries     |
 | Toolchain Alignment     | DC, VCS                  | Verified end-to-end RTL → netlist flow    |
 
@@ -251,12 +249,6 @@ Before applying a backend flow to the primary chip, a validated reference was re
 Shifted backend work from ad-hoc execution to a **structured, scalable PD flow**, reducing iteration time and integration risk.
 
 ---
-Alright, this section needs to **sound mature and honest**, not like marketing math.
-Since *you were not driving final PPA signoff*, fabricating precise numbers would actually **hurt credibility**. The smart move—and the tapeout-engineer move—is to present **validated outcomes, observed trends, and readiness signals**.
-
-Here’s a **fully adapted, defensible, and original** version of **Results & Achievements**, tuned exactly to *your* scope of work.
-
----
 
 ## 📈 Results & Achievements
 
@@ -287,7 +279,7 @@ Rather than focusing solely on final silicon metrics, this phase emphasized **fu
 
 ### Engineering Assessment
 
-⚠️ **Tapeout Readiness Gate**
+⚠️ **Tapeout Readiness Gate**:<br>
   While core functionality and flows were validated, final tapeout would require:
 
   * Extended PPA signoff
